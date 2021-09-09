@@ -3,7 +3,7 @@
 import base64
 import os
 import json
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 from contextlib import contextmanager
 
@@ -53,7 +53,7 @@ def demo_server(port="8000"):
     @param port  Port to run server on.
     """
     with lcd("demo/build/html"):
-        local("python -m SimpleHTTPServer %s" % port)
+        local("python -m http.server %s" % port)
 
 
 ###############################################################################

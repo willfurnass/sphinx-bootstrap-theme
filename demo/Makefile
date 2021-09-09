@@ -48,7 +48,7 @@ html:
 
 server:
 	@echo "Running dev. server on port 4001."
-	cd build/html && python -m SimpleHTTPServer 4001
+	cd build/html && python -m http.server 4001
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
